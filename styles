@@ -1,0 +1,57 @@
+/* fluid layout*/
+.container{
+    width:70%;
+    margin: 0 auto;
+    background-color: brown;
+}
+
+/* flexible image*/
+img {
+    width: 100%;
+    height: auto; /* align to a center */
+}
+
+
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: grey;
+    }
+    .container{
+        width: 100%;
+        background-color: lime;
+    }
+}
+
+/* Flexible Box Layout*/
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    background-color: lightgreen;
+}
+
+.item {
+    background-color: #ccc;
+    padding: 20px;
+    margin: 10px;
+    flex: 1; /* this allows the items to grow and filled the container equally*/
+
+}
+
+/* grid layout*/
+.grid-container {
+    display: grid;
+    grid-template-areas: "header header header"
+                         "menue main right"
+                         "footer footer footer";
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.item1{grid-area: header; background-color: lightblue;}
+.item2{grid-area: main; background-color: orange;}
+.item3{grid-area: menue; background-color: green;}
+.item4{grid-area: right; background-color: brown;}
+.item5{grid-area: footer; background-color: yellow;}
